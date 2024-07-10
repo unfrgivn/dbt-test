@@ -1,0 +1,23 @@
+# bigquery:
+#   outputs:
+#     dev:
+#       dataset: dbt_test
+#       method: oauth
+#       project: brad-ash-dev
+#       threads: 4
+#       type: bigquery
+#   target: dev
+
+dbtlearn:
+  outputs:
+    dev:
+      dataset: dbt_test
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: brad-ash-dev
+      threads: 4
+      type: bigquery
+  target: dev

@@ -1,0 +1,24 @@
+# 
+services:
+  dbt-server:
+    build:
+      context: .
+    # environment:
+    # ports:
+    #   - '8581:8580'
+    volumes:
+      - ./:/usr/app
+      - ./profiles.yml:/root/.dbt/profiles.yml
+
+networks:
+  default:
+    driver: bridge
+
+# docker run \
+# --network=host \
+# --mount type=bind,source=$(pwd),target=/usr/app \
+# --mount type=bind,source=$(pwd)/profiles.yml,target=/root/.dbt/ \
+# ghcr.io/dbt-labs/dbt-bigquery:1.8.2@sha256:7d69619872ba38c7dfa47613457ec4d276468dafde3b7ad3b0b2fc267579a471
+
+
+# docker pull ghcr.io/dbt-labs/dbt-bigquery:1.8.2@sha256:7d69619872ba38c7dfa47613457ec4d276468dafde3b7ad3b0b2fc267579a471
