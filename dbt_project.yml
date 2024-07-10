@@ -43,7 +43,7 @@ models:
 #   user_name: "YOUR_USERNAME"
 
 flags:
-  fail_fast: true
+  fail_fast: false
   partial_parse: true
   send_anonymous_usage_stags: false
   use_colors: true
